@@ -53,6 +53,33 @@ function render() {
 
   document.getElementById("total").textContent = habits.length;
   document.getElementById("completed").textContent = doneCount;
+
+  let percent = habits.length === 0 ? 0 : Math.round((doneCount / habits.length) * 100);
+
+document.getElementById("progressText").textContent =
+  "You completed " + percent + "% of your habits 🎯";
+
+  function setReminder() {
+  alert("Reminder set! ⏰");
+
+  setTimeout(() => {
+    alert("Hey! Time to complete your habit 💖");
+  }, 5000);
+}
+
+let streak = localStorage.getItem("streak") || 0;
+
+function updateStreak() {
+  let allDone = habits.length > 0 && habits.every(h => h.done);
+
+  if (allDone) {
+    streak++;
+    localStorage.setItem("streak", streak);
+  }
+
+  document.getElementById("progressText").innerHTML += "<br>🔥 Streak: " + streak;
+}
+updateStreak();
 }
 
 function saveHabits() {
@@ -64,3 +91,11 @@ window.onload = () => {
   if (data) habits = JSON.parse(data);
   render();
 };
+
+function showSection(section) {
+  document.getElementById("habitsSection").style.display = "none";
+  document.getElementById("progressSection").style.display = "none";
+  document.getElementById("remindersSection").style.display = "none";
+
+  document.getElementById(section + "Section").style.display = "block";
+}
