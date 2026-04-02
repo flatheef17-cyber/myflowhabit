@@ -1,0 +1,138 @@
+/* ===== LANDING PAGE ===== */
+
+.landing {
+  height: 100vh;
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #ff9a9e, #a18cd1);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.hero {
+  text-align: center;
+  color: white;
+}
+
+.logo {
+  font-size: 48px;
+  font-weight: bold;
+  animation: fadeIn 1.5s ease;
+}
+
+.tagline {
+  margin-top: 10px;
+  font-size: 18px;
+  opacity: 0.8;
+}
+
+.start-btn {
+  display: inline-block;
+  margin-top: 25px;
+  padding: 12px 25px;
+  background: white;
+  color: #a18cd1;
+  border-radius: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.start-btn:hover {
+  transform: scale(1.1);
+}
+
+/* animation */
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px);}
+  to { opacity: 1; transform: translateY(0);}
+}
+
+
+
+
+/* ===== APP PAGE ===== */
+
+body {
+  margin: 0;
+  font-family: 'Poppins', sans-serif;
+  background: linear-gradient(135deg, #667eea, #764ba2);
+  color: white;
+}
+
+.app {
+  text-align: center;
+  padding: 30px;
+}
+
+/* glass effect */
+.glass {
+  background: rgba(255,255,255,0.15);
+  backdrop-filter: blur(12px);
+  border-radius: 20px;
+  padding: 15px;
+  margin: 15px auto;
+  width: 300px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+}
+
+/* input */
+.input-card {
+  display: flex;
+  justify-content: space-between;
+}
+
+input {
+  border: none;
+  padding: 10px;
+  border-radius: 10px;
+  width: 70%;
+}
+
+button {
+  border: none;
+  background: white;
+  border-radius: 10px;
+  cursor: pointer;
+}
+
+/* stats */
+.stats {
+  display: flex;
+  justify-content: space-around;
+}
+
+/* habit cards */
+.habit {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  animation: slideUp 0.4s ease;
+}
+
+.habit:hover {
+  transform: scale(1.03);
+}
+
+.done {
+  text-decoration: line-through;
+  opacity: 0.6;
+}
+
+/* animations */
+@keyframes slideUp {
+  from { transform: translateY(20px); opacity: 0;}
+  to { transform: translateY(0); opacity: 1;}
+}
+
+
+
+button:hover {
+  transform: scale(1.1);
+}
+
+input:focus {
+  outline: none;
+  box-shadow: 0 0 10px rgba(255,255,255,0.5);
+}

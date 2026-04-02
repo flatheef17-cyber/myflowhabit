@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Dashboard</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div class="app">
+
+    <h1>MyFlowHabit</h1>
+
+    <div class="glass input-card">
+      <input id="habitInput" placeholder="Add a habit...">
+      <button onclick="addHabit()">+</button>
+    </div>
+
+    <div class="glass stats">
+      <div>
+        <h2 id="total">0</h2>
+        <p>Total</p>
+      </div>
+      <div>
+        <h2 id="completed">0</h2>
+        <p>Done</p>
+      </div>
+    </div>
+
+    <div id="habitList"></div>
+
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
