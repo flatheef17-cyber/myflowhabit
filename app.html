@@ -1,3 +1,26 @@
+<div class="nav">
+  <button onclick="showSection('habits')">Habits</button>
+  <div id="habitsSection">
+  <!-- your habit UI here -->
+</div>
+  <button onclick="showSection('progress')">Progress</button>
+  <div id="progressSection" style="display:none;">
+  <h2>Your Progress 📊</h2>
+  <p id="progressText"></p>
+</div>
+  <button onclick="showSection('reminders')">Reminders</button>
+  <div id="remindersSection" style="display:none;">
+  <h2>Reminders ⏰</h2>
+  <button onclick="setReminder()">Remind me in 5 sec</button>
+</div>
+</div>
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
